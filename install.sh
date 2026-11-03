@@ -37,7 +37,6 @@ else
     ditto -x -k "$tmp/app.zip" "$tmp"
     rm -rf "$DEST/$NAME"
     mv "$tmp/$NAME" "$DEST/"
-    xattr -dr com.apple.quarantine "$DEST/$NAME" 2>/dev/null || true
 fi
 
 open "$DEST/$NAME"
